@@ -4,6 +4,6 @@ if grep -q email ".git/config"; then
 else
 
 	echo '[user]' >> .git/config
-	echo '	name = "canyon"' >> .git/config
-	echo '	email = "canyonservice62@gmail.com"' >> .git/config
+	echo '	name = "enve"' >> .git/config
+	echo '	email = "user@gmail.com"' >> .git/config
 fi
