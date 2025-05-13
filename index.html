@@ -5486,6 +5486,8 @@ Explore your accessibility options" class="INDcircle-btn" style="top: 100px; --i
 					size += "27.2mm x 400mm, "
 				} else if (number.charAt(1) == '6') { //  31.6mm diameter
 					size += "31.6mm x 400mm, "
+				} else if (number.charAt(1) == '7') { //  30.8mm diameter
+					size += "30.8mm x 400mm, "
 				} else {
 					badResult(); 
 				}
@@ -5515,7 +5517,11 @@ Explore your accessibility options" class="INDcircle-btn" style="top: 100px; --i
 					document.getElementById("rprod").innerHTML = "EN512625440";
 					document.getElementById("prodimg").src = "https://i.imgur.com/zuMveg1.jpg";
 				} else if (number.charAt(2) == '6') {
-					size += " 0mm Layback";
+					if (isGen1) {
+						size += " 5mm Layback";
+					} else {
+						size += " 0mm Layback";
+					}
 					document.getElementById("rprod").innerHTML = "EN512627240";
 					document.getElementById("prodimg").src = "https://i.imgur.com/zuMveg1.jpg";
 				} else {
@@ -5538,6 +5544,8 @@ Explore your accessibility options" class="INDcircle-btn" style="top: 100px; --i
 				}
 				
 			} else if (number.charAt(0) == '2') { // stem
+				// 01234567
+				// 23213214 // black logo old 90mm
 				var size = "";
 				switch (parseInt(number.charAt(2), 10)) {
 					case 1: size = "80mm"; break;
